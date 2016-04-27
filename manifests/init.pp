@@ -209,8 +209,8 @@ class puppetdashboard(
       Anchor['post_config_exec'],
       File[
         'puppet_dashboard_log',
-        'puppet_dashboard_tmp',
-        $install_dir
+        'puppet_dashboard_tmp'
+        #  $install_dir     # Could be VCSREPO !!!
       ]
     ],
   }
@@ -230,8 +230,8 @@ class puppetdashboard(
         Anchor['post_config_exec'],
         File[
           'puppet_dashboard_log',
-          'puppet_dashboard_tmp',
-          $install_dir
+          'puppet_dashboard_tmp'
+        #  $install_dir     # Could be VCSREPO !!!
         ]
       ]
     }
@@ -247,8 +247,8 @@ class puppetdashboard(
       Anchor['post_config_exec'],
       File[
         'puppet_dashboard_log',
-        'puppet_dashboard_tmp',
-        $install_dir
+        'puppet_dashboard_tmp'
+      #  $install_dir     # Could be VCSREPO !!!
       ]
     ],
   }

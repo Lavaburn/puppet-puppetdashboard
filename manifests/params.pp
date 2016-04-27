@@ -28,10 +28,10 @@ class puppetdashboard::params {
   $repo_ref                 = '2.0.0-beta2'
 
   case $::osfamily {
-    Debian:{
+    'Debian':{
       $ruby_bin         = '/usr/bin/ruby'
       case $::operatingsystem {
-        'ubuntu': {
+        'Ubuntu': {
           case $::lsbdistcodename {
             'trusty': {
               $gem_dependencies = [
