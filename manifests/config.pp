@@ -32,7 +32,6 @@ class puppetdashboard::config (
   $port                     = $::puppetdashboard::params::apache_port,
   $enable_workers           = true,
   $disable_webrick          = true,
-  $apache_user              = $::puppetdashboard::params::apache_user,
   $ruby_bin                 = $::puppetdashboard::params::ruby_bin,
   $number_of_workers        = $::processorcount
 ) inherits ::puppetdashboard::params {
