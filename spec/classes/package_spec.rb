@@ -3,7 +3,8 @@ describe 'puppetdashboard::install::package', :type => :class do
   context "on a Debian OS" do
     let :facts do
       {
-        :osfamily   => 'Debian',
+        :osfamily        => 'Debian',
+        :operatingsystem => 'Debian',
       }
     end
     describe "with no parameters" do

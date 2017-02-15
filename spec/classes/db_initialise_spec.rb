@@ -5,6 +5,7 @@ describe 'puppetdashboard::db::initialise', :type => :class do
       let :facts do
         {
           :osfamily                       => 'Debian',
+          :operatingsystem                => 'Debian',
           :dashboard_db_scripts_timestamp => '1234567890',
           :dashboard_version              => '1.2.23'
         }

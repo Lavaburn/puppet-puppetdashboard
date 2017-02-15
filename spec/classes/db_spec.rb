@@ -7,6 +7,7 @@ describe 'puppetdashboard::db', :type => :class do
         :operatingsystem        => 'Debian',
         :operatingsystemrelease => '6.0',
         :concat_basedir         => '/dne',
+        :dashboard_version      => '1.3.0' # versioncmp can't be undef
       }
     end
     describe 'with no parameters' do

@@ -4,6 +4,7 @@ describe 'puppetdashboard::site::apache', :type => :class do
     let :facts do
       {
         :osfamily               => 'Debian',
+        :operatingsystem        => 'Debian',
         :operatingsystemrelease => '6',
         :concat_basedir         => '/dne',
         :fqdn                   => 'test.example.org',

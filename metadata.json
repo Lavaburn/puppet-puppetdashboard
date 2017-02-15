@@ -21,15 +21,14 @@
     },
     {
       "name": "puppet",
-      "version_requirement": "3.x"
+      "version_requirement": ">=3.6.0 <5.0.0"
     }
   ],
   "dependencies": [
-    { "name": "puppetlabs/stdlib", "version_requirement": ">=3.2.0 <5.0.0" },
     { "name": "puppetlabs/apache", "version_requirement": ">=1.0.0 <2.0.0" },
-    { "name": "puppetlabs/vcsrepo", "version_requirement": ">=1.0.0 <2.0.0" },
-    { "name": "puppetlabs/nodejs", "version_requirement": ">=0.6.0 <1.0.0" },
+    { "name": "puppetlabs/concat", "version_requirement": ">=1.0.0 <3.0.0" },
     { "name": "puppetlabs/ruby", "version_requirement": ">=0.3.0 <1.0.0" },
-    { "name": "Aethylred/git", "version_requirement": ">=0.2.0 <1.0.0" }
+    { "name": "puppetlabs/stdlib", "version_requirement": ">=3.2.0 <5.0.0" },
+    { "name": "puppetlabs/vcsrepo", "version_requirement": ">=1.0.0 <2.0.0" }    
   ]
 }

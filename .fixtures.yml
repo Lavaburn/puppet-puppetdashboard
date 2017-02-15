@@ -1,29 +1,26 @@
 fixtures:
   forge_modules:
-    stdlib:
-      repo: 'puppetlabs-stdlib'
-      ref:  '4.3.2'
     apache:
       repo: 'puppetlabs-apache'
-      ref:  '1.1.1'
-    vcsrepo:
-      repo: 'puppetlabs-vcsrepo'
-      ref:  '1.1.0'
-    postgresql:
-      repo: 'puppetlabs-postgresql'
-      ref:  '3.4.2'
+      ref:  '1.11.0'
     concat:
       repo: 'puppetlabs-concat'
-      ref:  '1.1.1'
-    ruby:
-      repo: 'puppetlabs-ruby'
-      ref:  '0.3.0'
+      ref:  '2.2.0'
     mysql:
       repo: 'puppetlabs-mysql'
-      ref:  '2.3.1'
-    puppet:
-      repo: 'Aethylred-puppet'
-      ref:  '1.4.1'
+      ref:  '3.10.0'
+    postgresql:
+      repo: 'puppetlabs-postgresql'
+      ref:  '4.8.0'
+    ruby:
+      repo: 'puppetlabs-ruby'
+      ref:  '0.6.0'
+    stdlib:
+      repo: 'puppetlabs-stdlib'
+      ref:  '4.15.0'
+    vcsrepo:
+      repo: 'puppetlabs-vcsrepo'
+      ref:  '1.5.0'
   repositories:
     # none
   symlinks:

@@ -3,7 +3,8 @@ describe 'puppetdashboard::db::mysql', :type => :class do
   context 'on a Debian OS' do
     let :facts do
       {
-        :osfamily                       => 'Debian'
+        :osfamily        => 'Debian',
+        :operatingsystem => 'Debian',
       }
     end
     describe 'with no parameters' do
@@ -20,8 +21,8 @@ describe 'puppetdashboard::db::mysql', :type => :class do
         'ensure'        => 'present',
         'table'         => 'puppetdashboard.*',
         'user'          => 'puppetdashboard@localhost',
-        'options'       => 'GRANT',
-        'privileges'    => 'ALL'
+        'options'       => ['GRANT'],
+        'privileges'    => ['ALL']
       ) }
     end
     describe 'when setting custom user and hostname' do

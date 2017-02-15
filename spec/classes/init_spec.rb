@@ -9,6 +9,7 @@ describe 'puppetdashboard', :type => :class do
         :concat_basedir         => '/dne',
         :fqdn                   => 'test.example.org',
         :processorcount         => '2',
+        :dashboard_version      => '1.3.0' # versioncmp can't be undef
       }
     end
     describe 'with default apache' do
@@ -82,7 +83,7 @@ describe 'puppetdashboard', :type => :class do
             'Anchor[post_config_exec]',
             'File[puppet_dashboard_log]',
             'File[puppet_dashboard_tmp]',
-            'File[/usr/share/puppet-dashboard]'
+            #'File[/usr/share/puppet-dashboard]'
           ]
         ) }
         it { should contain_class('puppetdashboard::site::webrick').with(
@@ -92,7 +93,7 @@ describe 'puppetdashboard', :type => :class do
             'Anchor[post_config_exec]',
             'File[puppet_dashboard_log]',
             'File[puppet_dashboard_tmp]',
-            'File[/usr/share/puppet-dashboard]'
+            #'File[/usr/share/puppet-dashboard]'
           ]
         ) }
         it { should contain_file('puppet_dashboard_log').with(
