@@ -57,14 +57,15 @@ class puppetdashboard::install::git (
   }
 
   @ruby::rake {'puppet_dashboard_precompile_assets':
-    task      => 'assets:precompile',
-    bundle    => true,
-    rails_env => 'production',
-    creates   => "${install_dir}/tmp/cache",
-    cwd       => $install_dir,
-    require   => Ruby::Bundle['puppet_dashboard_install'],
-    timeout   => 900,
-    tag       => 'post_config',
+    task        => 'assets:precompile',
+    bundle      => true,
+    rails_env   => 'production',
+    creates     => "${install_dir}/tmp/cache",
+    cwd         => $install_dir,
+    environment => ['HOME=/root', 'SECRET_KEY_BASE=none'],
+    require     => Ruby::Bundle['puppet_dashboard_install'],
+    timeout     => 900,
+    tag         => 'post_config',
   }
 
 }

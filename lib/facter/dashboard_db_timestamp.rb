@@ -6,9 +6,9 @@ Facter.add(:dashboard_db_timestamp) do
       if Dir.chdir(install_dir)
         if version = Facter.value('dashboard_version')
           if Gem::Version.new(version.match(/^\d*\.\d*\.\d*/)) > Gem::Version.new('1.2.23')
-            rake_command = "bundle exec rake -f #{install_dir}/Rakefile RAILS_ENV=production db:version 2> /dev/null|tail -1"
+            rake_command = "bundle exec rake -f #{install_dir}/Rakefile SECRET_KEY_BASE=none RAILS_ENV=production db:version 2> /dev/null|tail -1"
           else
-            rake_command = "rake -f #{install_dir}/Rakefile RAILS_ENV=production db:version 2> /dev/null|tail -1"
+            rake_command = "rake -f #{install_dir}/Rakefile SECRET_KEY_BASE=none RAILS_ENV=production db:version 2> /dev/null|tail -1"
           end
           if db_timestamp = Facter::Util::Resolution.exec(rake_command)
             unless db_timestamp.nil?

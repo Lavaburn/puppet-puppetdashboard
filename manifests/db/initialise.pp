@@ -25,7 +25,7 @@ class puppetdashboard::db::initialise (
     bundle      => $bundle_rake,
     rails_env   => 'production',
     cwd         => $install_dir,
-    environment => ['HOME=/root'],
+    environment => ['HOME=/root', 'SECRET_KEY_BASE=none'],
     unless      => "${rake_command} db:version && test `${rake_command} db:version 2> /dev/null|tail -1|cut -c 18-` = '${timestamp}'",
     require     => [
       File[
